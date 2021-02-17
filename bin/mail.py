@@ -13,7 +13,6 @@ class Mail:
         self.log.append(2,'Creating email message')
         self.msg = MIMEMultipart()
         opt = sys.argv[1:][0]
-        print(opt)
         if opt == '-d':
             self.msg['Subject'] = '[ZABBIX][{}] Daily report'.format(today)
         elif opt == '-m':
